@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>STAMP APP</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    
+    <body>
+        <header>
+            <div class="header-logo">
+                <p>STAMP APP</p>
+            </div>
+        </header>
+
+        <div class="main">
+            <!--現在時刻-->
+            <div class="status">
+                <h2>現在時刻</h2>
+                <p id="current-time"></p>
+            </div>
+            <script>
+                function showCurrentTime() {z
+                    let date = new Date();
+                    document.getElementById("current-time").innerHTML = date.toLocaleString("ja");
+                }
+                setInterval('showCurrentTime()', 10);
+            </script>
+
+            <!--現在の状況-->
+            <div class="status">
+                <h2>現在の状況</h2>
+                <p id="current-time">出勤前</p>
+            </div>
+
+            <div class="status">
+                <h2>勤務開始時刻</h2>
+                <p id="start-work-time"></p>
+            </div>
+
+            <div class="status">
+                <h2>勤務終了時刻</h2>
+                <p id="finish-work-time"></p>
+            </div>
+
+            <div class="status">
+                <h2>本日の勤務時間</h2>
+                <p id="working-hour"></p>
+            </div>
+
+            <!--打刻-->
+            <div class="stamp-wrapper">
+                <h2>打刻</h2>
+                
+                <button class="stamp" id="start-work" onclick="alert('出勤！')">
+                    出勤 
+                </button>
+
+                <button class="stamp" id="finish-work" onclick="alert('退勤！')">
+                    退勤
+                </button>
+            </div>
+        </div>
+
+    </body>
+</html>
